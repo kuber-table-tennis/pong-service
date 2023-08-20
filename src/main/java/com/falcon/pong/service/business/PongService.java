@@ -8,18 +8,7 @@ import org.springframework.stereotype.Service;
 public class PongService {
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(PongService.class);
 
-
-    @Autowired
-    private PingClient pingClient;
-
     public void pong(){
-        log.info("Pong Service: Pong");
-    }
-    public void sendPong(){
-        try{
-            pingClient.pongToPing();
-        }catch(Exception e){
-            log.info(e.getMessage());
-        }
+        log.info("Pong");
     }
 }
